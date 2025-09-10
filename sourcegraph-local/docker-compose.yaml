@@ -1,0 +1,14 @@
+version: "3.2"
+
+services:
+  sourcegraph:
+    image: sourcegraph/server:6.7.2720
+    container_name: sourcegraph
+    ports:
+      - "7080:7080"
+    volumes:
+      - sourcegraph-data:/data
+    restart: always
+
+volumes:
+  sourcegraph-data:
